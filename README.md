@@ -1,2 +1,3 @@
 # DynamicQuartzJob
 通过数据库配置定时任务执行时间来实现动态配置定时任务
+数据库设置参考mapper/scheduleJob.xml下的查询方法
