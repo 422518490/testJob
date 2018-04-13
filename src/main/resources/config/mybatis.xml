@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration  PUBLIC "-//ibatis.apache.org//DTD Config 3.1//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-config.dtd">
+<configuration>
+    <!--<environments default="development">
+    &lt;!&ndash; 开发环境数据  &ndash;&gt;
+        <environment id="development">
+            <transactionManager type="jdbc"></transactionManager>
+            <dataSource type="pooled">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url"
+                          value="jdbc:mysql://localhost:3306/test?useSSL=false&amp;characterEncoding=utf-8"/>
+                <property name="username" value="root"/>
+                <property name="password" value=""/>
+            </dataSource>
+        </environment>
+    </environments>-->
+
+    <mappers>
+        <mapper resource="mapper/scheduleJob.xml"/>
+    </mappers>
+</configuration>

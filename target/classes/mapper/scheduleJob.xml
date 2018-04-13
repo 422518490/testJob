@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.job.JobTestDao">
+     <select id="getAll" resultType="com.job.ScheduleJobForm">
+         SELECT
+	SCHEDULE_JOB_ID scheduleJobId,
+	job_name jobName,
+    job_group jobGroup,
+    job_status jobStatus,
+    corn_experssion cronExpression,
+    description,
+    bean_class beanClass,
+    concurrent_status concurrentStatus,
+    spring_id springId,
+    method_name methodName,
+    created_by createdBy,
+    creation_date creationDate,
+    last_updated_by lastUpdatedBy,
+    last_update_date lastUpdateDate
+FROM schedule_job
+     </select>
+
+    <select id="getJobByNameAndGroup" parameterType="com.job.ScheduleJobForm" resultType="com.job.ScheduleJobForm">
+        SELECT
+        SCHEDULE_JOB_ID scheduleJobId,
+        job_name jobName,
+        job_group jobGroup,
+        job_status jobStatus,
+        corn_experssion cronExpression,
+        description,
+        bean_class beanClass,
+        concurrent_status concurrentStatus,
+        spring_id springId,
+        method_name methodName,
+        created_by createdBy,
+        creation_date creationDate,
+        last_updated_by lastUpdatedBy,
+        last_update_date lastUpdateDate
+        FROM schedule_job
+        WHERE
+          job_name = #{jobName}
+        AND job_group = #{jobGroup}
+    </select>
+</mapper>
